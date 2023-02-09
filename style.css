@@ -1,0 +1,734 @@
+@font-face {
+    font-family: vazir;
+    src: url('vazir.ttf');
+}
+body{
+    font-family: vazir;
+    margin: 0;
+}
+
+/*header*/
+
+header{
+    position: relative;
+    height: 100vh;
+    background-image: url('images/3.jpg');
+    background-size: cover;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12%;
+    border-bottom: 1px solid rgba(107, 107, 107, 0.658);
+}
+header nav ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+header nav ul li{
+    margin-left: 20px;
+}
+header nav ul li a{
+    position: relative;
+    color: white;
+    text-decoration: none;
+    padding: 0 5px;
+}
+header nav ul li a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -18px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: all .4s;
+}
+header nav ul li a:hover:after{
+    width: 100%;
+}
+header nav ul li a.active::after{
+    width: 100%;
+}
+header nav h2{
+    color: white;
+    margin: 0;
+    padding: 0 10px;
+    font-weight: normal;
+    border-bottom: 2px solid white;
+}
+header .content{
+    position: absolute;
+    top: 40%;
+    right: 14%;
+    color: white;
+}
+header .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 4px;
+    height: 100%;
+    background-color: rgb(194, 52, 0);
+}
+header .content h1{
+    font-size: 50px;
+    margin: 10px 0;
+}
+header .content p:first-child{
+    margin: 0;
+    font-size: 18px;
+}
+header .content button{
+    font-family: vazir;
+    font-size: 18px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: all .4s;
+}
+header .content button:hover{
+    color: black;
+    background-color: white;
+}
+
+/*about*/
+
+.about{
+    width: 75%;
+    margin: auto;
+    padding-top: 60px;
+}
+.about>h1{
+    position: relative;
+    font-size: 28px;
+}
+.about>h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 40px;
+    width: 40px;
+    height: 2px;
+    background-color: rgb(194, 52, 0);
+}
+.about>p{
+    margin-bottom: 40px;
+}
+.about .info{
+    display: flex;
+}
+.about .info>.right{
+    flex: 1;
+    margin-left: 40px;
+}
+.about .info>.right img{
+    width: 100%;
+    height: 100%;
+}
+.about .info>.left{
+    flex: 2;
+}
+.about .info>.left h1{
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+.about .info>.left .introduce span{
+    color: rgb(192, 47, 47);
+}
+.about .info>.left .personal-info{
+    display: flex;
+    margin-top: 45px;
+    margin-bottom: 20px;
+}
+.about .info>.left .personal-info .right{
+    flex: 1;
+    margin-left: 20px;
+}
+.about .info>.left .personal-info .left{
+    flex: 1;
+}
+.about .info>.left .personal-info p{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.767);
+    color: rgb(119, 119, 119);
+    font-size: 14px;
+}
+.about .info>.left .personal-info p span{
+    color: black;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.about .info>.left .social-media i{
+    cursor: pointer;
+    font-size: 22px;
+    margin: 0 5px;
+}
+
+/*service*/
+
+.service{
+    background-color: rgb(241, 241, 241);
+    margin-top: 80px;
+}
+.service .container{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+.service .container h1{
+    position: relative;
+    text-align: center;
+    background-color: rgb(241, 241, 241);
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+.service .container h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    width: 40px;
+    height: 2px;
+    transform: translateX(50%);
+    background-color: rgb(194, 52, 0);
+}
+.service .container .services{
+    display: flex;
+    flex-wrap: wrap;
+}
+.service .container .services div{
+    position: relative;
+    width: 26%;
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    padding: 20px 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.service .container .services div h4{
+    font-size: 14px;
+    margin: 25px 0 15px;
+}
+.service .container .services div button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background-color: rgb(233, 85, 0);
+    cursor: pointer;
+    font-size: 16px;
+}
+.service .container .services div .text{
+    font-size: 14px;
+    color: rgb(117, 117, 117);
+    margin-bottom: 10px;
+}
+.service .container .services div::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    width: 15%;
+    height: 2px;
+    transform: translateX(50%);
+    background-color: rgb(194, 52, 0);
+}
+
+/*skills*/
+
+.skills{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.skills>div{
+    width: 28%;
+    height: 450px;
+}
+.skills .right{
+    margin-left: 100px;
+}
+.skills .right h1{
+    position: relative;
+    font-size: 26px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.skills .right h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 15%;
+    width: 60px;
+    height: 2px;
+    background-color: rgb(194, 52, 0);
+}
+.skills .right p{
+    font-size: 14px;
+}
+.skills .right .ability{
+    margin-top: 40px;
+    direction: ltr;
+}
+.skills .right .ability h5{
+    margin: 20px 0 5px;
+}
+.skills .right .ability .progress{
+    height: 3px;
+    background-color: rgb(209, 208, 208);
+}
+.skills .right .ability .progress .html-progress-bar{
+    position: relative;
+    width: 95%;
+    height: 100%;
+    background-color: rgb(214, 16, 2);
+}
+.skills .right .ability .progress .html-progress-bar::before{
+    content: '95%';
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: rgb(184, 184, 184);
+}
+.skills .right .ability .progress .css-progress-bar{
+    position: relative;
+    width: 95%;
+    height: 100%;
+    background-color: rgb(214, 16, 2);
+}
+.skills .right .ability .progress .css-progress-bar::before{
+    content: '95%';
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: rgb(184, 184, 184);
+}
+.skills .right .ability .progress .js-progress-bar{
+    position: relative;
+    width: 75%;
+    height: 100%;
+    background-color: rgb(214, 16, 2);
+}
+.skills .right .ability .progress .js-progress-bar::before{
+    content: '75%';
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: rgb(184, 184, 184);
+}
+.skills .right .ability .progress .wordpress-progress-bar{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(214, 16, 2);
+}
+.skills .right .ability .progress .wordpress-progress-bar::before{
+    content: '60%';
+    position: absolute;
+    right: 0;
+    top: -25px;
+    color: rgb(184, 184, 184);
+}
+.skills .left img{
+    width: 100%;
+    height: 100%;
+}
+
+/*my-projects*/
+
+.my-projects{
+    position: relative;
+    background-color: rgb(241, 241, 241);
+    height: 800px;
+}
+.my-projects .container{
+    width: 75%;
+    margin: auto;
+    padding-top: 20px;
+}
+.my-projects .container h1{
+    position: relative;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 50px;
+}
+.my-projects .container h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    width: 60px;
+    height: 2px;
+    transform: translateX(50%);
+    background-color: rgb(194, 52, 0);
+}
+.my-projects .container ul{
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style-type: none;
+}
+.my-projects .container ul li{
+    margin: 0 10px;
+}
+.my-projects .container ul li button{
+    font-family: vazir;
+    font-size: 16px;
+    border: none;
+    padding-bottom: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.my-projects .container ul li button.active{
+    color: rgb(255, 115, 0);
+    border-bottom: 2px solid rgb(255, 115, 0);
+}
+.my-projects .container .projects{
+    display: flex;
+    flex-wrap: wrap;
+}
+.my-projects .container .projects .project{
+    position: relative;
+    width: 31%;
+    height: 250px;
+    margin: 10px;
+    cursor: pointer;
+}
+.my-projects .container .projects .project img{
+    width: 100%;
+    height: 100%;
+}
+.my-projects .container .projects .project .overlay{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.438);
+    color: white;
+    opacity: 0;
+    transition: all .4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.my-projects .container .projects .project .overlay:hover{
+    opacity: 1;
+}
+.my-projects .container .projects .project .overlay i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 94, 0);
+}
+.my-projects .container .projects .project .overlay h4{
+    margin-top: 15px;
+}
+.my-projects .container .projects .project .overlay *{
+    transform: translateY(20px);
+    transition: all .4s;
+}
+.my-projects .container .projects .project .overlay:hover *{
+    transform: translateY(0);
+}
+.my-projects .lgOverlay{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.699);
+}
+.my-projects .lgOverlay.active{
+    display: block;
+}
+.my-projects .lgOverlay img{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    top: 22%;
+    right: 50%;
+    transform: translateX(50%);
+}
+.my-projects .lgOverlay button{
+    position: absolute;
+    top: 16%;
+    left: 13%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: orangered;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/*message*/
+
+.message .top{
+    height: 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.message .top img{
+    height: 100%;
+}
+.message .top .text{
+    position: absolute;
+    display: flex;
+    width: 60%;
+    margin-top: 30px;
+    color: white;
+}
+.message .top .text p{
+    margin: 0;
+    margin-left: 70px;
+    font-size: 14px;
+    line-height: 25px;
+}
+.message .top .text button{
+    width: 180px;
+    height: 35px;
+    font-family: vazir;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: all .4s;
+}
+.message .top .text button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+.message .bottom{
+    position: relative;
+    height: 550px;
+    background-color: rgb(241, 241, 241);
+    overflow: hidden;
+}
+.message .bottom img{
+    height: 100%;
+}
+.message .bottom .content{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+}
+.message .bottom .content h1{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+.message .bottom .content h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 60px;
+    height: 2px;
+    background-color: rgb(194, 52, 0);
+}
+.message .bottom .content .customers{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
+    padding: 0 150px;
+}
+.message .bottom .content .customers .texts{
+    position: relative;
+    width: 570px;
+    height: 300px;
+}
+.message .bottom .content .customers .texts p{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 14px;
+    line-height: 30px;
+    opacity: 0;
+    transform: translateX(100px);
+}
+.message .bottom .content .customers .texts p.active{
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 1.4s;
+}
+.message .bottom .content .customers .customers-info{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 150px;
+}
+.message .bottom .content .customers .customers-info .name{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.message .bottom .content .customers .customers-info .name div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    text-align: center;
+    opacity: 0;
+}
+.message .bottom .content .customers .customers-info .name div.active{
+    opacity: 1;
+    height: 40%;
+    transition: all 1.4s;
+}
+.message .bottom .content .customers .customers-info .name div h4{
+    margin: 5px;
+}
+.message .bottom .content .customers .customers-info .name div span{
+    color: rgb(105, 105, 105);
+}
+.message .bottom .content .customers .customers-info .images{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.message .bottom .content .customers .customers-info .images img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transform: scale(0);
+}
+.message .bottom .content .customers .customers-info .images img.active{
+    transform: scale(1);
+    transition: all 1.4s;
+}
+.message .bottom .content button{
+    position: absolute;
+    bottom: 220px;
+    background-color: transparent;
+    border: none;
+    color: orangered;
+    cursor: pointer;
+    font-size: 26px;
+}
+.message .bottom .content .next{
+    right: 20px;
+}
+.message .bottom .content .previous{
+    left: 20px;
+}
+
+/*contact us*/
+
+.contact-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: rgb(241, 241, 241);
+}
+.contact-us .container{
+    width: 70%;
+    text-align: center;
+}
+.contact-us .container h1{
+    position: relative;
+    font-size: 28px;
+    margin-bottom: 60px;
+}
+.contact-us .container h1::after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 50%;
+    transform: translateX(50%);
+    width: 60px;
+    height: 2px;
+    background-color: rgb(194, 52, 0);
+}
+.contact-us .container .inputs{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-us .container .inputs input{
+    width: 31.5%;
+    font-family: vazir;
+    border: 1px solid rgb(156, 156, 156);
+    outline: none;
+    padding: 5px;
+}
+.contact-us .container textarea{
+    font-family: vazir;
+    width: 100%;
+    height: 250px;
+    resize: none;
+    border: 1px solid rgb(156, 156, 156);
+    outline: none;
+    padding: 10px;
+    margin-top: 30px;
+    box-sizing: border-box;
+}
+.contact-us .container button{
+    width: 200px;
+    height: 35px;
+    font-family: vazir;
+    background-color: rgb(247, 84, 25);
+    color: white;
+    margin-top: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*footer*/
+
+footer{
+    height: 400px;
+    background: url('images/footer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+}
+footer p{
+    font-size: 14px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+footer .social-media{
+    margin-bottom: 120px;
+}
+footer .social-media i{
+    font-size: 24px;
+    margin: 0 5px;
+    cursor: pointer;
+}
